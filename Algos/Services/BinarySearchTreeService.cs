@@ -8,10 +8,16 @@ namespace Algos.Services
     {
         public Node GetSeededTree()
         {
-            var root = new Node(1, new Node(2, left: new Node(4), right: new Node(5)),
-                                                    new Node(3, left: new Node(6), right: new Node(7, left: new Node(8), right: null)));
-
-            return root;
+            return new Node(1,
+                       new Node(2,
+                              left: new Node(4),
+                              right: new Node(5)),
+                       new Node(3,
+                              left: new Node(6),
+                              right: new Node(7,
+                                            left: new Node(8),
+                                            right: null))
+                       );
         }
 
         /// <summary>
