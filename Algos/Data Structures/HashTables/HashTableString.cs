@@ -26,9 +26,7 @@ namespace Algos.Data_Structures
             {
                 if (item.Key == key)
                 {
-                    _hashTable.Remove(item);
                     item.Value = value;
-                    _hashTable.Add(item);
                     return;
                 }
             }

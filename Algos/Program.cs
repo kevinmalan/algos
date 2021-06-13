@@ -12,6 +12,7 @@ namespace Algos
             Console.WriteLine("=========================");
             Console.WriteLine($"bst: Binary Search Tree");
             Console.WriteLine($"ht: Hash Tables");
+            Console.WriteLine($"hts: Hash Tables Space Complexity");
             Console.WriteLine($"q: Quit");
 
             var input = Console.ReadLine();
@@ -28,6 +29,12 @@ namespace Algos
 
                     case "ht":
                         OperateHashTables();
+                        Console.WriteLine();
+                        Console.WriteLine();
+                        break;
+
+                    case "hts":
+                        HashMapSpaceComplexity();
                         Console.WriteLine();
                         Console.WriteLine();
                         break;
@@ -49,6 +56,12 @@ namespace Algos
             }
 
             Console.WriteLine($"Thank you, see ya later!");
+        }
+
+        public static void HashMapSpaceComplexity()
+        {
+            var hashTableService = new HashTableService();
+            hashTableService.AssessSpaceComplxityOfCustomHashMapVsBuiltIn();
         }
 
         public static void OperateBinarySearchTrees()
