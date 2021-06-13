@@ -1,5 +1,4 @@
-﻿using Algos.Data_Structures;
-using Algos.Services;
+﻿using Algos.Services;
 using System;
 
 namespace Algos
@@ -13,6 +12,7 @@ namespace Algos
             Console.WriteLine($"bst: Binary Search Tree");
             Console.WriteLine($"ht: Hash Tables");
             Console.WriteLine($"hts: Hash Tables Space Complexity");
+            Console.WriteLine($"ahc: Array Hourglass");
             Console.WriteLine($"q: Quit");
 
             var input = Console.ReadLine();
@@ -39,6 +39,12 @@ namespace Algos
                         Console.WriteLine();
                         break;
 
+                    case "ahc":
+                        ArrayHourglass();
+                        Console.WriteLine();
+                        Console.WriteLine();
+                        break;
+
                     case "q":
                         input = "q";
                         break;
@@ -56,6 +62,24 @@ namespace Algos
             }
 
             Console.WriteLine($"Thank you, see ya later!");
+        }
+
+        public static void ArrayHourglass()
+        {
+            var data = new int[][]
+            {
+                new int[] { 1, 1, 1, 0, 0, 0, },
+                new int[] { 0, 1, 0, 0, 0, 0, },
+                new int[] { 1, 1, 1, 0, 0, 0, },
+                new int[] { 0, 0, 2, 4, 4, 0, },
+                new int[] { 0, 0, 0, 2, 0, 0, },
+                new int[] { 0, 0, 1, 2, 4, 0, },
+            };
+
+            var arrayService = new ArrayService();
+            var result = arrayService.GetHighestHourglassSum(data);
+
+            Console.WriteLine($"Highest Hourglass sum: {result}");
         }
 
         public static void HashMapSpaceComplexity()

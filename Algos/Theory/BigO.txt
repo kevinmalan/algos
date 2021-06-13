@@ -1,0 +1,27 @@
+Big O notation is used to worst-case performance bounds for an algorithm.
+
+O(1) always executes in the same space regardless of size of the data set.
+O(N) performance grows linearly and in direct proportion to the size of the data set.
+O(N^2) prformance is proportional to the square of the size of the data set. Common in nested loops. Additional nested loops will increase the square. 
+
+O(2^N) growth doubles with each addition to the data set. The growth curve is exponential.
+
+O(Log N) growth curve peaks in the beginning and slowly flattens out as the size of the data set decreases. E.g. Binary Search Tree.
+
+Example of O(1)
+- Accessing Array via index
+- Accessing hash via key
+- Pushing and Popping a stack
+- Inserting and removal from a queue
+- Returning a value from a function
+
+Why is accessing an array via index O(1) ?
+Elements of an array are stored in memory locations. By knowing the location of one elemnt, the location of another can be calculated.
+
+Note: Traversing an array however is O(N). E.g. a for each loop, as it steps through every item.
+
+Example of O(N)
+- Accessing node in a LinkedList
+
+Why is a accessing a node in a LInkedList O(N) ?
+Each node only has a reference to the next. Thus you have to traverse through the LinkedList to find the item.
